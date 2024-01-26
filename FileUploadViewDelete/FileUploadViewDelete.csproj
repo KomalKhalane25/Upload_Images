@@ -134,11 +134,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FileUploadsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\studentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FileUpload.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mode2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mode2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mode2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mode2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mode2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mode2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -154,6 +170,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\student.cs">
+      <DependentUpon>Mode2.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -177,6 +196,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Mode2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Mode2.edmx</DependentUpon>
+      <LastGenOutput>Mode2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Mode2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Mode2.edmx</DependentUpon>
+      <LastGenOutput>Mode2.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -205,6 +234,13 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <Content Include="App_Browsers\qt.browser" />
+    <EntityDeploy Include="Models\Mode2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Mode2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Mode2.edmx.diagram">
+      <DependentUpon>Mode2.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -235,10 +271,16 @@
     <Content Include="Views\FileUploads\Details.cshtml" />
     <Content Include="Views\FileUploads\Edit.cshtml" />
     <Content Include="Views\FileUploads\Index.cshtml" />
+    <Content Include="Views\students\Create.cshtml" />
+    <Content Include="Views\students\Delete.cshtml" />
+    <Content Include="Views\students\Details.cshtml" />
+    <Content Include="Views\students\Edit.cshtml" />
+    <Content Include="Views\students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Image\" />
+    <Folder Include="Views\Demo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
